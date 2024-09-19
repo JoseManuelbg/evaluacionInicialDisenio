@@ -1,0 +1,103 @@
+:root{
+    --text-color:#ddd;
+    --backgroud-color:#006233;
+    --product-color:#003b1f;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: var(--backgroud-color);
+    scrollbar-width: none;
+}
+header {
+    background-color: var(--backgroud-color);
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+
+
+.nav-bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 95%;
+}
+.nav-bar div{
+ padding-top: 15px;
+
+}
+.jager-logo{
+    width: 200px;
+    
+
+}
+.video{
+    width: 100%;
+}
+.video video{
+    height: 100vh;
+    
+    object-fit: fill;
+}
+
+.video > .arrow{
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+
+.video > svg{
+    width: 70px;
+    height: 70px;
+}
+
+.buy{
+    height: 100vh;
+}
+
+.buy .product > img{
+    width: 30%;
+    height: 100%;
+    border-radius: 10px;
+}
+.buy{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 15px;
+}
+.product{
+    border: 1px solid black;
+    width: 90%;
+    height: 500px;
+    background-color: var(--product-color) ;
+    border-radius: 10px;
+    
+}
+.buy > div:nth-child(odd) p{
+    box-sizing: border-box;
+    padding-left: 10px;
+   text-wrap: pretty;
+    width: 70%;
+   float: right;
+    
+
+   
+}
+.buy > div:nth-child(even) p{
+    box-sizing: border-box;
+    width: 70%;
+   float: left;
+   padding-left: 10px;
+   text-wrap: pretty;
+   
+}
