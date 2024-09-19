@@ -1,0 +1,41 @@
+:root{
+    --text-color:#ddd;
+    --backgroud-color:#006233;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    background-color: var(--backgroud-color);
+    height: 75px;
+    
+}
+.nav-bar{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nav-bar div{
+ padding-top: 15px;
+
+}
+.jager-logo{
+    width: 200px;
+    
+
+}
+.video{
+    width: 100%;
+}
+.video video{
+    height: 100vh;
+    
+    object-fit: fill;
+}
+
+.buy{
+    height: 100vh;
+}
