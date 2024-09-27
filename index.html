@@ -7,16 +7,16 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <nav class="nav-bar">
-            <div class="hamb-menu">
+            <div class="hamb-menu" id="menu">
                 
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
-            
+                <svg id="menu-logo" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
+                
             </div>
 
             <div class="logo">
-                <img src="/icons/jager-logo.png" alt="logo" class="jager-logo">
+               <a href="/index.html"> <img src="/icons/jager-white-logo.png" alt="logo" class="jager-logo"></a>
             </div>
             
             <div>
@@ -27,20 +27,56 @@
         </nav>
 
     </header>
+    <div class="menu-info" id="menu-info">
+        <ul>
+        <li><p>Products</p></li>
+        <li><p>About Us</p></li>
+        <li><p>Shopping</p></li>
+        </ul>
+        
+        </div>
     <!--Video inicial-->
-    <div class="video">
+    <div class="video" id="video">
         <svg class="arrow" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e8eaed"><path d="m296-224-56-56 240-240 240 240-56 56-184-183-184 183Zm0-240-56-56 240-240 240 240-56 56-184-183-184 183Z"/></svg>
-        <video autoplay muted loop height="100vh" width="100%" >
+        <video autoplay muted loop height="100vh" width="100%" id="innerVideo" >
             <source src="media/Jägermeister (CINEMATIC Commercial).mp4" type="video/mp4">
 
         </video>
     </div>
     <div class="buy">
-        <div class="product"><img src="icons/jager-normal.jpg" alt=""> <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, libero. Animi fugiat dicta mollitia id eius. Necessitatibus laboriosam ullam saepe blanditiis soluta laudantium animi culpa natus consectetur. Itaque, dolorem tenetur!</p></div>
-        <div class="product"><img src="icons/jager-scharf.jpg" alt=""><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, libero. Animi fugiat dicta mollitia id eius. Necessitatibus laboriosam ullam saepe blanditiis soluta laudantium animi culpa natus consectetur. Itaque, dolorem tenetur!</p></div>
-        <div class="product"><img src="icons/jager-coffee.png" alt=""><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, libero. Animi fugiat dicta mollitia id eius. Necessitatibus laboriosam ullam saepe blanditiis soluta laudantium animi culpa natus consectetur. Itaque, dolorem tenetur!</p></div>
-        <div class="product"><img src="icons/jager-orange.jpg" alt=""><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, libero. Animi fugiat dicta mollitia id eius. Necessitatibus laboriosam ullam saepe blanditiis soluta laudantium animi culpa natus consectetur. Itaque, dolorem tenetur!</p></div>
+        <div class="product"><img src="icons/jager-normal.jpg" alt=""> <p>Jägermeister es un licor herbal premium alemán, famoso por su sabor intenso y único, elaborado con 56 ingredientes naturales. Disfrútalo bien frío y descubre una experiencia llena de carácter y personalidad. Perfecto para cualquier ocasión.</p></div>
+        <div class="product"><img src="icons/jager-scharf.jpg" alt=""><p>Jägermeister Scharf intensifica el sabor tradicional con un toque de jengibre picante, ofreciendo una experiencia audaz y vibrante para quienes buscan una sensación más fuerte y atrevida. Perfecto para disfrutar en cualquier ocasión que requiera un giro más intenso.</p></div>
+        <div class="product"><img src="icons/jager-coffee.png" alt=""><p>Jägermeister Cold Brew combina a la perfección el icónico licor herbal con la suavidad del café, creando una mezcla única y refrescante. Es ideal para quienes disfrutan de un sabor más sofisticado y buscan una experiencia llena de energía.</p></div>
+        <div class="product"><img src="icons/jager-orange.jpg" alt=""><p>Jägermeister Orange aporta un toque refrescante de naranja a la clásica receta herbal. Con su equilibrio cítrico y ligeramente dulce, es perfecto para quienes quieren una opción más ligera y vibrante, ideal para disfrutar en cualquier momento.</p></div>
     </div>
+    <div class="about">
+        <h2>About us</h2>
+    </div>
+    <footer class="footer">
+        <div class="footer-section">
+            <a href="/index.html"><img src="/icons/jager-white-logo.png" alt="Jägermeister Logo" class="footer-logo"></a>
+        </div>
+    
+        <div class="footer-section">
+            <ul>
+                <li><a href="#">Nuestra Historia</a></li>
+                <li><a href="#">Bebidas</a></li>
+                <li><a href="#">Exploración</a></li>
+                <li><a href="#">Condiciones Generales</a></li>
+            </ul>
+        </div>
+    
+        <div class="footer-section">
+            <h2>Contacto</h2>
+            <address>
+                <p>Spain</p>
+                <p>Teléfono: +52 55 1234 5678</p>
+                <p>Email: <a href="mailto:contacto@jagermeister.com">contacto@jagermeister.com</a></p>
+            </address>
+        </div>
+    </footer>
+    
+
     <script src="/js/app.js"></script>
 </body>
 </html>

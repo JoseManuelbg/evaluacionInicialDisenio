@@ -1,18 +1,86 @@
-body{
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
+:root{
+    --text-color:#ddd;
+    --backgroud-color:#006233;
+    --product-color:#003b1f;
+    --button-hover:#db6b30;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--backgroud-color);
+    background-image: url(../icons/deer.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-.wrapper{
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    height: 100vh;
+    margin-left:10px ;
 }
 
-.form{
-    border: 1px solid black;
-    width: 200px;
-    height: 300px;
+.wrapper {
+    background: var(--product-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    gap: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.form {
+    display: flex;
+    
+    flex-direction: column;
+
+}
+
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    
+    padding: 10px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    border: 3px solid var(--backgroud-color);
+    
+}
+
+
+
+label{
+    padding-left: 10px;
+    font-size: small;
+    text-wrap: wrap;
+}
+
+.toggle-btn{
+    float: left;
 }

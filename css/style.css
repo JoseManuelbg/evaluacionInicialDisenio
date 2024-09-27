@@ -1,7 +1,15 @@
+/*Fonts:*/
+
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+
+
+
 :root{
     --text-color:#ddd;
     --backgroud-color:#006233;
     --product-color:#003b1f;
+    --button-hover:#db6b30;
+    --background-two:#092D17;
 }
 body{
     margin: 0;
@@ -9,6 +17,8 @@ body{
     box-sizing: border-box;
     background-color: var(--backgroud-color);
     scrollbar-width: none;
+    scroll-behavior: smooth;    /* <----- THE SECRET ---- */
+    overflow-y: scroll;
 }
 header {
     background-color: var(--backgroud-color);
@@ -17,33 +27,84 @@ header {
     justify-content: center;
     align-items: center;
     
+    
+}
+#header{
+    transition: .5s;
+    
 }
 
 
 
 .nav-bar{
+    z-index: 999;
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 95%;
+   
 }
-.nav-bar div{
- padding-top: 15px;
 
-}
 .jager-logo{
     width: 200px;
     
 
 }
+#menu-logo{
+    transition: 1s;
+}
+.menu-info{
+    z-index: 998;
+    margin: 0;
+    position: absolute;
+    background-color: var(--product-color);
+
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    border-radius: 0px 0px 30px 30px;
+    display: none;
+    transition: 1s;
+}
+
+.menu-info > ul{
+    list-style: none;
+}
+
+.menu-info > ul > li:hover{
+    background-color: var(--button-hover);
+}
+.menu-info > ul > li{
+    box-sizing: border-box;
+    border-radius: 20px;
+    width: 95%;
+    padding-left: 30px;
+    transition: .5s;
+
+}
+.menu-info> ul> li > p{
+    font-size: 60px;
+    color: var(--text-color);
+    
+
+}
 .video{
     width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
 }
 .video video{
-    height: 100vh;
-    
+    height: 100%;
+    width: 100%;
     object-fit: fill;
+    border-radius: 0px 0px 120px 120px; 
+    transition: width 0.5s ease; 
+   
 }
 
 .video > .arrow{
@@ -51,6 +112,8 @@ header {
     top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
+    transition: display 2s ease; 
+
    
 }
 
@@ -60,44 +123,163 @@ header {
 }
 
 .buy{
-    height: 100vh;
+    height: 250vh;
+    overflow: hidden;
+
 }
 
 .buy .product > img{
     width: 30%;
     height: 100%;
     border-radius: 10px;
+    
+}
+.buy > .product{
+    width: 100%;
+    transition: width 1.5s ease;
+    overflow: hidden;
+    border-radius: 20px;
+
+    
 }
 .buy{
     display: flex;
     align-items: center;
     flex-direction: column;
-    gap: 20px;
-    padding-top: 15px;
+    gap: 10px;
+
 }
 .product{
-    border: 1px solid black;
-    width: 90%;
-    height: 500px;
+    width: 100%;
+    height: 600px;
     background-color: var(--product-color) ;
-    border-radius: 10px;
+    font-size: 40px;
+    font-family: "Teko", sans-serif;
+
     
 }
+.product:nth-child(1){
+    margin-top: 10px;
+}
+.product:nth-child(2) {
+    background-color: rgb(34, 22, 0);
+} 
+.product:nth-child(3) {
+    background-color: rgb(0, 0, 0);
+} 
+.product:nth-child(4) {
+    background-color: rgb(190, 110, 5);
+} 
+
+/*Hover*/
+
+.buy .product:hover{
+    transition: .5s;
+    transform: translateY(-10px);
+}
+.buy .product:hover +*{
+    transition: .5s;
+    filter: brightness(0.2);
+}
+.buy .product:hover +*+*{
+    transition: .5s;
+    filter: brightness(0.1);
+}
+.buy .product:has( + *:hover){
+    transition: .5s;
+    filter: brightness(0.2);
+}
+.buy .product:has( + * + *:hover){
+    transition: .5s;
+    filter: brightness(0.2);
+}
+
 .buy > div:nth-child(odd) p{
     box-sizing: border-box;
     padding-left: 10px;
    text-wrap: pretty;
     width: 70%;
    float: right;
+   color: var(--text-color);
     
 
    
 }
+
 .buy > div:nth-child(even) p{
     box-sizing: border-box;
     width: 70%;
    float: left;
    padding-left: 10px;
    text-wrap: pretty;
+   color: var(--text-color);
+    
    
+}
+.about{
+    height: 150vh;
+    display: flex;
+    justify-content: center;
+    
+}
+.about > h2{
+    color: var(--text-color);
+    font-size: 100px;
+    font-family: "Teko";
+}.footer {
+    background-color: #092D17;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0;
+    color: #ddd;
+}
+.footer > .footer-section >img{
+    color: white;
+
+}
+.footer-section {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #ddd;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #db6b30;
+}
+
+.footer-section address {
+    font-style: normal;
+    line-height: 1.8;
+}
+
+.footer-section address a {
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section address a:hover {
+    color: #db6b30;
 }

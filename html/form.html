@@ -7,16 +7,25 @@
     <link rel="stylesheet" href="../css/form.css">
 </head>
 <body>
+
+    
     <div class="wrapper">
     <h2>Before continuing any further...</h2>
     
     <form action="" class="form">
-        <label for="name">Username</label>
-        <input type="text" name="name" id="name">
-        <label for="passwd">Password</label>
-        <input type="password" name="passwd" id="passwd">
+        <input type="text" name="name" id="name" placeholder="Name*">
+ 
+            <input type="password" name="passwd" id="passwd" placeholder="Password*" required>
+            
+            <input type="checkbox" id="togglePassword" class="toggle-btn">
+            <label for="toggle-btn">Show Password</label>
+        
+        <div class="termsCont">
+        <input type="checkbox" name="terms" id="terms"><label for="terms">Yes, I have read the Terms & Conditions and the Privacy Policy and I accept</label>
+    </div>
         <input type="submit" value="Submit" class="submit">
     </form>
 </div>
+<script src="../js/form.js"></script>
 </body>
 </html>
