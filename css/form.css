@@ -41,8 +41,9 @@ h2 {
 
 .form {
     display: flex;
-    
+    color: #fff;
     flex-direction: column;
+    gap: 10px;
 
 }
 
@@ -69,7 +70,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    border: 3px solid var(--backgroud-color);
+    color: gray;
     
 }
 
@@ -83,4 +84,11 @@ label{
 
 .toggle-btn{
     float: left;
+}
+
+span{
+    color: var(--button-hover);
+}
+span:hover{
+    text-decoration: underline;
 }

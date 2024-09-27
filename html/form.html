@@ -11,20 +11,27 @@
     
     <div class="wrapper">
     <h2>Before continuing any further...</h2>
-    
-    <form action="" class="form">
-        <input type="text" name="name" id="name" placeholder="Name*">
- 
-            <input type="password" name="passwd" id="passwd" placeholder="Password*" required>
-            
-            <input type="checkbox" id="togglePassword" class="toggle-btn">
-            <label for="toggle-btn">Show Password</label>
+    <form action="../index.html" class="form" id="form">
+        <input type="text" name="name" id="name" placeholder="Name*" required>
+     
+        <input type="password" name="passwd" id="passwd" placeholder="Password*" required>
         
+        <div class="passwordCont">
+            <input type="checkbox" id="togglePassword" class="toggle-btn">
+            <label for="togglePassword">Show Password</label>
+        </div>
+    
         <div class="termsCont">
-        <input type="checkbox" name="terms" id="terms"><label for="terms">Yes, I have read the Terms & Conditions and the Privacy Policy and I accept</label>
-    </div>
+            <input type="checkbox" name="terms" id="terms" required>
+            <label for="terms">Yes, I have read the <span>Terms & Conditions</span> and the <span>Privacy Policy</span> and I accept</label>
+        </div>
+    
         <input type="submit" value="Submit" class="submit">
     </form>
+    
+    <!-- Aquí se mostrarán los errores -->
+    <div id="error-msg" style="color: red;"></div>
+    
 </div>
 <script src="../js/form.js"></script>
 </body>
