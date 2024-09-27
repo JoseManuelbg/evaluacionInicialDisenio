@@ -89,6 +89,10 @@ label{
 span{
     color: var(--button-hover);
 }
-span:hover{
+a:hover{
     text-decoration: underline;
+}
+a{
+    color: #db6b30;
+    text-decoration: none;
 }
